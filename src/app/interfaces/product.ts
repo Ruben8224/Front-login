@@ -1,5 +1,6 @@
 export interface Product {
     id: number,
     name: string,
-    description: string
+    matricula: string,
+    carrera: string,
 }
