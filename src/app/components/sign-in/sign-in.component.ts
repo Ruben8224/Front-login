@@ -50,7 +50,7 @@ export class SignInComponent implements OnInit {
     }
 
     this.loading = true;
-    this._userService.signIn(user).subscribe({
+    this._userService.SignIn(user).subscribe({
       next: (v) => {
         this.loading = false;
         this.toastr.success(`El usuario ${this.username} fue registrado con exito`, 'Usuario registrado');
