@@ -1,6 +1,11 @@
 export interface User {
-    username: string,
+    correo: string,
+    contraseña: string
+}
+
+export interface SignIn {
+    correo: string,
     matricula: string,
-    carrera: string,
-    password: string
+    contraseña: string,
+    url_imagen: string
 }

@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { User } from '../interfaces/user';
+import { User, SignIn } from '../interfaces/user';
 
 @Injectable({
   providedIn: 'root'
@@ -15,11 +15,11 @@ export class UserService {
     this.apiUrl = environment.endpoint;
     }
 
-    SignIn(user: User): Observable<any> {
-      return this.http.post<any>(`${this.apiUrl}/api/v1/estudiantes`, user);
+    SignIn(user: SignIn): Observable<any> {
+      return this.http.post<any>(`${this.apiUrl}/crearCuenta`, user);
     }
 
-    login(user: User): Observable<string> {
-      return this.http.post<any>(`${this.apiUrl}/api/v1/estudiantes`, user);
+    login(user: any): Observable<string> {
+      return this.http.post<any>(`${this.apiUrl}/IniciarSesion`, user);
     }
 }

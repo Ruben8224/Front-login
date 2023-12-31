@@ -1,0 +1,27 @@
+.credential-card {
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  padding: 26px;
+  max-width: 350px;
+  margin: 0 auto;
+  background-color: #9ec7d1;
+}
+
+.info-section {
+  margin-top: 100px;
+}
+
+table {
+  width: 100%;
+}
+
+table th, table td {
+  padding: 8px;
+  text-align: left;
+}
+
+.date-time-section {
+  margin-top: 10px;
+}
+
+/* Puedes ajustar estos estilos según tus preferencias */

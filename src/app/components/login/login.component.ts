@@ -35,16 +35,20 @@ export class LoginComponent implements OnInit {
     }
 
     // Creamos el body
-    const user: User = {
-      username: this.username,
-      matricula: this.matricula,
-      carrera: this.carrera,
-      password: this.password
+
+    let user: User = {
+      correo: this.username,
+      contraseña: this.password
     }
 
+    let inicioSesion = [];
+    inicioSesion[0] = user.correo;
+    inicioSesion[1] = user.contraseña;
+
     this.loading = true;
-    this._userService.login(user).subscribe({
+    this._userService.login(inicioSesion).subscribe({
       next: (token) => {
+        console.log(token);
         localStorage.setItem('token', token);
         this.router.navigate(['/dashboard'])
       },
