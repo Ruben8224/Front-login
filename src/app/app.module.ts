@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
+import { QRCodeModule } from 'angularx-qrcode';
 
 // Componentes
 import { LoginComponent } from './components/login/login.component';
@@ -45,6 +46,7 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
     FirestoreModule,
     BrowserAnimationsModule,
     CommonModule,
+    QRCodeModule,
     ToastrModule.forRoot({
       timeOut: 4000,
       positionClass: 'toast-bottom-right',

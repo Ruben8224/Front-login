@@ -4,22 +4,30 @@
   <div class="credential-card">
     <h2>Credencial</h2>
 
+    <div>
+      <img src={{alumno?.url_imagen}} alt="" style="width: 40%; height: 100%;">
+    </div>
+
+    <div>
+      <qrcode [qrdata]="datosQR" [width]="300" [errorCorrectionLevel]="'M'"></qrcode>
+    </div>
+ 
     <div class="info-section">
       <table class="table">
         <thead>
           <tr>
-            <th scope="col">Nombre:</th>
+            <th scope="col">Nombre: {{alumno?.nombre}} </th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <th>Licenciatura:</th>
+            <th>Licenciatura: {{alumno?.licenciatura}} </th>
           </tr>
           <tr>
-            <th>Matrícula:</th>
+            <th>Matrícula: {{alumno?.matricula}} </th>
           </tr>
           <tr>
-            <th>Sexo:</th>
+            <th>Sexo: {{alumno?.sexo}} </th>
           </tr>
         </tbody>
       </table>

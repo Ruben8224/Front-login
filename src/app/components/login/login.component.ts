@@ -47,9 +47,8 @@ export class LoginComponent implements OnInit {
 
     this.loading = true;
     this._userService.login(inicioSesion).subscribe({
-      next: (token) => {
-        console.log(token);
-        localStorage.setItem('token', token);
+      next: (token: any) => {
+        localStorage.setItem('token', token.token);
         this.router.navigate(['/dashboard'])
       },
       error: (e: HttpErrorResponse) => {

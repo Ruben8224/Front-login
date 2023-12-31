@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/interfaces/product';
 import { ProductService } from 'src/app/services/product.service';
+import { MenuService } from 'src/app/services/menu.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -14,11 +15,16 @@ export class DashboardComponent implements OnInit {
   horaActual: string = '';
   vigencia: string = '';
   private intervalId: any;
+  public alumno: any;
+  public datosQR: any;
 
-  constructor(private _productService: ProductService) { }
+  constructor(
+    private _productService: ProductService,
+    private _menuService: MenuService
+    ) { }
 
   ngOnInit(): void {
-    this.getProducts();
+    this.ObtenerUsuario();
     this.obtenerFechaHoraActual();
     this.actualizarVigencia();
     this.intervalId = setInterval(() => {
@@ -32,6 +38,16 @@ export class DashboardComponent implements OnInit {
     })
   }
 
+  async ObtenerUsuario() {
+    this.alumno = await this._menuService.Usuario().toPromise();
+    this.alumno = this.alumno.data;
+    console.log(this.alumno);
+    this.GenerarQR();
+  }
+
+  GenerarQR() {
+    this.datosQR = this.alumno.matricula + ',' + this.alumno.nombre + ',Presente';
+  }
 
   actualizarVigencia() {
     const hoy = new Date();
