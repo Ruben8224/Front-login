@@ -1,0 +1,31 @@
+<div class="wrapper">
+    <div *ngIf="!loading" class="body">
+        <img class="logo" src="../../../assets/img/login.png" alt="img login">
+        <h3>Registrar Usuario</h3>
+        <div class="form-floating mb-3">
+            <input type="text" [(ngModel)]="correo" class="form-control" placeholder="correo">
+            <label>Correo</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="text" [(ngModel)]="matricula" class="form-control" placeholder="Ingrese matricula">
+            <label>Matricula</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="password" [(ngModel)]="password" class="form-control" placeholder="Ingrese password">
+            <label>Password</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="password" [(ngModel)]="confirmPassword" class="form-control" placeholder="Ingrese password de nuevo">
+            <label>Repetir Password</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input style="margin-top: 1rem;" type="file" (change)="GuardarImagen($event)">
+          <img class="img-preview" *ngIf="imageURL" [src]="imageURL" alt="Imagen Subida">
+      </div>
+        <div class="d-grid gap-2 mb-3">
+            <button type="button" (click)="addUser()" class="btn btn-primary btn-lg">Aceptar</button>
+        </div>
+        <a routerLink="/login">Volver</a>
+    </div>
+    <app-spinner *ngIf="loading"></app-spinner>
+</div>
