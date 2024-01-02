@@ -1,22 +1,22 @@
 <div class="wrapper">
     <div *ngIf="!loading" class="body">
-        <img class="logo" src="../../../assets/img/login.png" alt="img login">
-        <h3>Registrar Usuario</h3>
+        <img class="logo" src="https://firebasestorage.googleapis.com/v0/b/calculadora-93291.appspot.com/o/img%2FLogo.jpg?alt=media&token=b3765c3a-a8e6-4104-abe3-69aaf60164b4" alt="img login">
+        <h3>Crear Cuenta</h3>
         <div class="form-floating mb-3">
             <input type="text" [(ngModel)]="correo" class="form-control" placeholder="correo">
-            <label>Correo</label>
+            <label></label>
         </div>
         <div class="form-floating mb-3">
             <input type="text" [(ngModel)]="matricula" class="form-control" placeholder="Ingrese matricula">
-            <label>Matricula</label>
+            <label></label>
         </div>
         <div class="form-floating mb-3">
             <input type="password" [(ngModel)]="password" class="form-control" placeholder="Ingrese password">
-            <label>Password</label> 
+            <label></label>
         </div>
         <div class="form-floating mb-3">
             <input type="password" [(ngModel)]="confirmPassword" class="form-control" placeholder="Ingrese password de nuevo">
-            <label>Repetir Password</label>
+            <label></label>
         </div>
         <div class="form-floating mb-3">
           <input style="margin-top: 1rem;" type="file" (change)="GuardarImagen($event)">

@@ -1,0 +1,45 @@
+.body {
+  margin: 100%;
+  padding: 100%;
+  background-color: black;
+  color: white;
+  height: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.body {
+  background: black;
+  padding: 50px;
+  border-radius: 5px;
+  text-align: auto;
+}
+
+.logo {
+  max-width: 85%;
+  height: auto;
+}
+
+h3, label, .form-control {
+  background: linear-gradient(to right, #ffffff, #cccccc);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.form-floating input {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+}
+
+.btn-custom-orange.btn-primary {
+  background-color: orange;
+  color: white;
+  border: 1px solid white;
+}

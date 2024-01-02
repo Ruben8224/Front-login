@@ -1,27 +1,48 @@
-.credential-card {
-  border: 2px solid #3498db;
-  border-radius: 8px;
-  padding: 26px;
-  max-width: 350px;
-  margin: 0 auto;
-  background-color: #9ec7d1;
+body {
+  background-color: #000; /* Código de color para negro */
+  color: #000000; /* Cambia el color del texto si es necesario para que sea legible en el fondo negro */
+  margin: 0; /* Elimina los márgenes predeterminados del cuerpo para ocupar toda la pantalla */
+  font-family: 'Arial', sans-serif; /* Cambia la fuente del texto según tus preferencias */
 }
 
+.credential-card {
+  max-width: 300px;
+  margin: 0 auto;
+  background-color: #000;
+  color: #000000; /* Cambiado a blanco */
+}
 .info-section {
-  margin-top: 100px;
+  background-color: #000; /* Cambiado a negro */
+  color: #fff; /* Cambiado a blanco */
+  padding: 10px; /* Ajustado según sea necesario */
+  border-radius: 8px; /* Ajustado según sea necesario */
 }
 
 table {
   width: 100%;
+  color: #000000; /* Cambiado a blanco */
 }
 
 table th, table td {
   padding: 8px;
   text-align: left;
+  border: 1px solid #000000; /* Cambiado a blanco */
 }
 
 .date-time-section {
   margin-top: 10px;
+  color: #ffffff; /* Cambiado a blanco */
 }
 
-/* Puedes ajustar estos estilos según tus preferencias */
+.gradient-text {
+  background: linear-gradient(to right, #ffffff, #cccccc);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Estilos para la sección de fecha y hora */
+.date-time-section h6 {
+  background: linear-gradient(to right, #ffffff, #cccccc);
+  -webkit-background-clip: text;
+  color: transparent;
+}
