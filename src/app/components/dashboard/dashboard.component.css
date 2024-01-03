@@ -3,11 +3,12 @@ body {
   color: #000000; /* Cambia el color del texto si es necesario para que sea legible en el fondo negro */
   margin: 0; /* Elimina los márgenes predeterminados del cuerpo para ocupar toda la pantalla */
   font-family: 'Arial', sans-serif; /* Cambia la fuente del texto según tus preferencias */
+  height: max-content;
+
 }
 
 .credential-card {
   max-width: 300px;
-  margin: 0 auto;
   background-color: #000;
   color: #000000; /* Cambiado a blanco */
 }

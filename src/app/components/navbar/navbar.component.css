@@ -12,7 +12,7 @@
 }
 
 .custom-navbar .btn-outline-custom:hover {
-  color: #513838; /* Blanco */
+  color: #000000; /* Blanco */
   background-color: #ffffff; /* Azul */
   border-color: #ffffff; /* Azul */
 }

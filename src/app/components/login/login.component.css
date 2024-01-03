@@ -1,9 +1,11 @@
 .body {
-  margin: 100%;
-  padding: 100%;
+  margin: 0%;
+  padding: 0%;
   background-color: black;
   color: white;
   height: 100%;
+  width: 100vw;
+  height: 100vh;
 }
 
 .wrapper {
@@ -12,17 +14,17 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
+  background-color: black;
 }
 
 .body {
   background: black;
   padding: 50px;
-  border-radius: 5px;
   text-align: auto;
 }
 
 .logo {
-  max-width: 85%;
+  max-width: 100%;
   height: auto;
 }
 
